@@ -3,10 +3,10 @@ import './App.css';
 import {useEffect} from "react"
 
 function App() {
-  useEffect(() =>{
-    fetch("http://localhost:5000/api/TodoItems")
-    .then(response => response.json())
-    .then(data => console.log(data))
+  useEffect(async () => {
+    var response = await fetch("http://localhost:5000/api/TodoItems");
+    var data = await response.json();
+    console.log(data);
   },[]);
 
   return (
