@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import {useEffect,useState} from "react"
 import TodoItems from './components/TodoItems';
+import { Container } from "@material-ui/core"
 
 function App() {
   const [todoItems,settodoItems] = useState([]);
@@ -14,12 +15,12 @@ function App() {
   },[]);
 
   return (
-    <>
+    <Container>
       <header>
       </header>
       <h1>測試待辦事項</h1>
       <TodoItems todoItems={todoItems}></TodoItems>
-    </>
+    </Container>
   );
 }
 
